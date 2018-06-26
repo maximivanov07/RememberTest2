@@ -82,26 +82,20 @@ namespace RememberTest2
         }
         ///
 
-        static void AriphProgr()
+        public static void AriphProgr()
         {
-            int a = 2; //то, что будем возводить в степень
-            int n = 5; //сколько элементов в формуле (сколько итераций)
-            int mult = n - 1; //размер степени 
-            int x; //вычисленная степень
+            int a = 3; //то, что будем возводить в степень
+            int progressionSize = 5; //сколько элементов в формуле (сколько итераций)
+            int result=0; //results
 
-            for (int i=0; i<=mult; i++)
+
+            for (int i = 1; i < progressionSize; i++)
             {
-                x = Convert.ToInt32(Math.Pow(a, mult));
-
-                //for (int j = 0; j <= mult; j++)
-                //  {
-                //       Console.WriteLine(1 + (x));
-                //    }
-                Console.WriteLine(x);
+                int x = Convert.ToInt32(Math.Pow(a, i));
+                result = result + x;
 
             }
-
-
+            Console.WriteLine(result+1);
         }
     }
 }
